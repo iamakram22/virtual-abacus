@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+        <meta content="utf-8" http-equiv="encoding">
+        <meta name="robots" content="noindex">
+        <title>Abacus Tool - Hashtagweb.in</title>
+        <!-- Google Fonts -->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <script src="script.js"></script>
+        <!-- Favicon -->
+            <link rel="icon" href="https://hashtagweb.in/wp-content/uploads/2021/11/Favicon.png" sizes="32x32" />
+            <link rel="icon" href="https://hashtagweb.in/wp-content/uploads/2021/11/Favicon.png" sizes="192x192" />
+            <link rel="apple-touch-icon" href="https://hashtagweb.in/wp-content/uploads/2021/11/Favicon.png" />
+    </head>
+    <body oncontextmenu="return false;">
+        <h1>Abacus Tool</h1>
+        <div class="controls">
+            <!-- <input id="decrement" type="submit" value="Decrement"/>
+            <input id="increment" type="submit" value="Increment"/> -->
+            Rails: <input id="abacus_rails" type="number" min="1" value="15"/>
+            <!-- <input id="teach" type="submit" value="Teach"/> -->
+            <input id="clear" type="submit" value="Clear"/>
+            <!-- <input id="complement" type="submit" value="Complement"/> -->
+            <input id="undo" type="submit" value="Undo"/>
+            <input id="redo" type="submit" value="Redo"/>
+        </div>
+        <br>
+        <article id="abacus_article"
+        data-format="Japanese"
+        data-rails="15"
+        data-right-to-left-add="0"
+        data-right-to-left-mult="0"
+        data-sound="0"></article>
+
+        <div id="abacus_p">
+            <span id="abacus_span" contenteditable="true" style="padding-right: 16px;"></span>
+        </div>
+        <script>initAbacus(null, document.getElementById("abacus_span"), document.getElementById("abacus_rails"));</script>
+        <br>Tool developed by <a href="https://hashtagweb.in" target="_blank">Hashtagweb.in</a>.<br>
+    </body>
+</html>
