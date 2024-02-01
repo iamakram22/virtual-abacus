@@ -7635,7 +7635,7 @@ setStyleDisplay : function(display) {
         + (this.abacusCanvasElement.width - 4)
         + "px; margin: 0; text-align: right; "
         + "line-height: 23px; color: " + this.border;
-    document.getElementById(display.spanElement.id).setAttribute("style", style);
+    // document.getElementById(display.spanElement.id).setAttribute("style", style);
 },
 
 getSpan : function() {
@@ -7932,10 +7932,12 @@ function initAbacus(canvasElement, spanElement, railsElement) {
     init(abaci, 1);
     primary = abaci[0];
     primary.initSpaceAbacus();
+    var toolContainer = document.getElementById("init_tool");
     if (!canvasElement) {
         canvasElement = document.createElement("canvas");
-        canvasElement.setAttribute("style", "vertical-align: bottom; display:block;");
-        document.body.appendChild(canvasElement);
+        canvasElement.setAttribute("id", "abacus_canvas");
+        canvasElement.setAttribute("class", "container");
+        toolContainer.appendChild(canvasElement);
     }
     canvasElement.id = "abacus_canvas";
     primary.abacusCanvasElement = canvasElement;

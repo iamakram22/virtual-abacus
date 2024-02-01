@@ -1,5 +1,5 @@
 :root {
-    --font: 'Roboto', sans-serif;
+    --font: 'Poppins', sans-serif;
     --pri: #eb5b26;
     --sec: #101010;
     --ter: #FFFFFF;
@@ -14,12 +14,6 @@ h1 {
     font-family: var(--font);
     color: var(--sec);
     margin-left: 0px;
-}
-
-input[type="number"] {
-    width: 50px;
-    padding: 5px 10px;
-    margin-inline-end: 10px;
 }
 
 input[type="submit"] {
@@ -61,4 +55,21 @@ th, td {
 .controls {
     font-size: 18px;
     font-family: var(--font);
+}
+
+#abacus_canvas {
+    display:block;
+    border-radius: 20px;
+    padding: 10px;
+    height: 100%;
+}
+
+#credit {
+    width: 100%;
+}
+
+@media (max-width:1023px) {
+    #abacus_canvas {
+        padding: 5px;
+    }
 }

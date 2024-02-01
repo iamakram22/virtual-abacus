@@ -1,45 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
-        <meta content="utf-8" http-equiv="encoding">
-        <meta name="robots" content="noindex">
-        <title>Abacus Tool - Hashtagweb.in</title>
-        <!-- Google Fonts -->
-            <link rel="preconnect" href="https://fonts.googleapis.com">
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="style.css" type="text/css">
-        <script src="script.js"></script>
-        <!-- Favicon -->
-            <link rel="icon" href="https://hashtagweb.in/wp-content/uploads/2021/11/Favicon.png" sizes="32x32" />
-            <link rel="icon" href="https://hashtagweb.in/wp-content/uploads/2021/11/Favicon.png" sizes="192x192" />
-            <link rel="apple-touch-icon" href="https://hashtagweb.in/wp-content/uploads/2021/11/Favicon.png" />
-    </head>
-    <body oncontextmenu="return false;">
-        <h1>Abacus Tool</h1>
-        <div class="controls">
-            <!-- <input id="decrement" type="submit" value="Decrement"/>
-            <input id="increment" type="submit" value="Increment"/> -->
-            Rails: <input id="abacus_rails" type="number" min="1" value="15"/>
-            <!-- <input id="teach" type="submit" value="Teach"/> -->
-            <input id="clear" type="submit" value="Clear"/>
-            <!-- <input id="complement" type="submit" value="Complement"/> -->
-            <input id="undo" type="submit" value="Undo"/>
-            <input id="redo" type="submit" value="Redo"/>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abacus Tool - Hashtagweb.in</title>
+    <link rel="icon" href="assets/images/favicon.png" sizes="32x32" />
+    <link rel="stylesheet" href="assets/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body oncontextmenu="return false;">
+    <noscript>
+        <div class="alert alert-danger" style="padding: 20px; position:absolute; top: 100px;left: 100px;">
+            <p>You need <strong style="font-size:1.2em;">javascript</strong> to be turned <strong>on</strong> for this to work !</p>
         </div>
-        <br>
+    </noscript>
+
+    <section class="main">
+        <div class="container py-2">
+            <h1>Virtual Abacus Tool</h1>
+            <div class="alert alert-danger d-lg-none" role="alert">
+                This tool will only work on Desktop or Laptop
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="controls py-3">
+                <div class="d-flex justify-content-between">
+                    <div class="input-group">
+                        <label class="input-group-text" for="abacus_rails">Rails</label>
+                        <input type="number" class="disabled-element form-control" id="abacus_rails" >
+                    </div>
+                    <div class="input-group justify-content-end">
+                        <input type="button" id="clear" class="btn btn-outline-dark" value="Clear"/>
+                        <input type="button" id="undo" class="btn btn-dark" value="Undo"/>
+                        <input type="button" id="redo" class="btn btn-dark" value="Redo"/>
+                        <!-- <input type="button" id="decrement" class="btn btn-dark" value="Decrement"/> -->
+                        <!-- <input type="button" id="increment" class="btn btn-dark" value="Increment"/> -->
+                        <!-- <input type="button" id="teach" class="btn btn-dark" value="Teach"/> -->
+                        <!-- <input type="button" id="complement" class="btn btn-dark" value="Complement"/> -->
+                    </div>
+                </div>
+            </div>
+            
+            <div id="abacus_p" class="input-group input-group-lg">
+                <span class="input-group-text" id="inputGroup-sizing-lg">Output</span>
+                <div id="abacus_span" class="form-control" contenteditable="true" style="padding-right: 16px;"></div>
+            </div>
+        </div>            
+        
+        <!-- Define the format -->
         <article id="abacus_article"
         data-format="Japanese"
         data-rails="15"
         data-right-to-left-add="0"
         data-right-to-left-mult="0"
         data-sound="0"></article>
+        
+        <!-- Tool container -->
+        <div id="init_tool" class="container mt-3"></div>
 
-        <div id="abacus_p">
-            <span id="abacus_span" contenteditable="true" style="padding-right: 16px;"></span>
+        <div id="credit" class="bg-secondary-subtle text-center p-2 position-absolute bottom-0 z-n1">
+            Tool developed by <a href="https://hashtagweb.in" target="_blank">Hashtagweb.in</a>.
         </div>
-        <script>initAbacus(null, document.getElementById("abacus_span"), document.getElementById("abacus_rails"));</script>
-        <br>Tool developed by <a href="https://hashtagweb.in" target="_blank">Hashtagweb.in</a>.<br>
-    </body>
+    </section>
+
+    <!-- scripts -->
+    <script src="script.js"></script>
+    <script>
+        initAbacus(null, document.getElementById("abacus_span"), document.getElementById("abacus_rails"));
+
+        var myModal = new bootstrap.Modal(document.getElementById('myModal'), {})
+        myModal.toggle()
+
+    </script>
+    <script src="assets/bootstrap.min.js"></script>
+</body>
 </html>
