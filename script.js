@@ -7936,7 +7936,7 @@ function initAbacus(canvasElement, spanElement, railsElement) {
     if (!canvasElement) {
         canvasElement = document.createElement("canvas");
         canvasElement.setAttribute("id", "abacus_canvas");
-        canvasElement.setAttribute("class", "container");
+        // canvasElement.setAttribute("class", "container");
         toolContainer.appendChild(canvasElement);
     }
     canvasElement.id = "abacus_canvas";
