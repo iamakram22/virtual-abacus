@@ -65,13 +65,15 @@
     </section>
 
     <!-- scripts -->
+    <script src="assets/jquery.min.js"></script>
     <script src="script.js"></script>
     <script>
         initAbacus(null, document.getElementById("abacus_span"), document.getElementById("abacus_rails"));
 
-        var myModal = new bootstrap.Modal(document.getElementById('myModal'), {})
-        myModal.toggle()
-
+        $(document).ready(function() {
+            const canvas = $('#abacus_canvas');
+            canvas.css({'width': $('#abacus_canvas').prop('width') + 'px'})
+        });
     </script>
     <script src="assets/bootstrap.min.js"></script>
 </body>
