@@ -83,6 +83,10 @@ th, td {
     width: 100%;
 }
 
+.control-rail {
+    display: none;
+}
+
 @media (max-width:1023px) {
     #abacus_canvas {
         padding: 5px;

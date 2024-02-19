@@ -12,7 +12,7 @@
 
 var MIN_RAILS = 1;
 var MIN_DEMO_RAILS = 3;
-var DEFAULT_RAILS = 15;
+var DEFAULT_RAILS = 17;
 var DEFAULT_TOP_SPACES = 2;
 var DEFAULT_BOTTOM_SPACES = 2;
 var DEFAULT_TOP_NUMBER = 2;
@@ -3279,7 +3279,7 @@ drawDecimalSeparator : function(rail) {
     if (this.decimalPosition < 1 && !this.placeOnRail)
         return;
     coord0 = new Coord(this.getPlacePositionX(rail)
-        - (this.railThickness >> 1) - 3, y);
+        - (this.railThickness >> 1) - 30, y);
     coord1 = new Coord(coord0.x + this.railThickness + 5,
         y + this.middleBarThickness - 2);
     if (this.vertical) {
@@ -3316,7 +3316,7 @@ drawGroupSeparator : function(rail) {
         return;
     }
     y++
-    coord0 = new Coord(this.getPlacePositionX(rail) - (this.railThickness >> 1),
+    coord0 = new Coord(this.getPlacePositionX(rail) - 27 - (this.railThickness >> 1),
         y);
     coord1 = new Coord(coord0.x + this.railThickness,
         y + this.middleBarThickness - 2);
