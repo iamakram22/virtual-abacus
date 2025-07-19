@@ -2871,7 +2871,8 @@ place : function(bead, show, record) {
         this.pressedBead = null;
         return;
     }
-    if (bead.deck === this.decks) {
+    // Diabled middle rod click
+    /* if (bead.deck === this.decks) {
         if (bead.deck !== this.pressedBead.deck) {
             this.drawAbacus();
             return;
@@ -2894,7 +2895,13 @@ place : function(bead, show, record) {
         this.setArabicNumeral(this.display, bead, 0);
         this.drawAbacus();
         return;
+    } */
+    if (bead.deck === this.decks) {
+        // Completely disable middle rod decimal position changes
+        this.drawAbacus();
+        return;
     }
+    // End diabled middle rod click
     if (bead.deck !== this.pressedBead.deck ||
             bead.rail !== this.pressedBead.rail) {
         this.drawAbacus();
