@@ -4,9 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="keywords" content="soroban, abacus, ábaco, math" />
-    <meta
-      name="description"
-      content="An online soroban abacus designed to play online and illustrate the use of this ancient oriental calculator" />
+    <meta name="description" content="An online soroban abacus designed to play online and illustrate the use of this ancient oriental calculator" />
     <link rel="stylesheet" type="text/css" href="./assets/style.min.css" />
     <title>Virtual Abacus Tool - Hashtagweb.in</title>
   </head>
@@ -16,17 +14,11 @@
         <img src="./assets/hashtag.svg" alt="Hashtag Web Logo" height="40" />
       </a>
       <a href="http://hashtagweb.in" target="_blank">
-        <img
-          src="./assets/kaps.svg"
-          alt="Kaps Learning System Logo"
-          height="40" />
+        <img src="./assets/kaps.svg" alt="Kaps Learning System Logo" height="40" />
       </a>
     </div>
     <div id="canvasdiv">
-      <canvas id="canvas" width="1520" height="300">
-        Sorry, this application needs HTML5 canvas support, please upgrade you
-        browser.
-      </canvas>
+      <canvas id="canvas" width="1520" height="300"> Sorry, this application needs HTML5 canvas support, please upgrade you browser. </canvas>
     </div>
     <fieldset>
       <legend>Settings</legend>
@@ -53,18 +45,30 @@
         <input type="radio" name="abacusMode" value="multiplication" />
         Multiplication/Division
       </label>
+      <br />
+      <br />
+      <div class="random_container">
+        <div class="input-group">
+          <label for="random_input" class="input-group-text"> Random Digits </label>
+          <input type="number" class="form-control" id="random_input" value="5" min="1" max="9" />
+
+          <label for="decimal_input" class="input-group-text">Decimals</label>
+          <input type="number" class="form-control" id="decimal_input" value="0" min="0" max="8" />
+
+          <input type="button" id="random" class="btn btn-success" value="Generate" />
+
+          <span id="random_result" style="margin-left: 10px; font-weight: bold"></span>
+          <span id="random_check" style="margin-left: 10px; display: none"> &#9989; </span>
+        </div>
+      </div>
     </fieldset>
-    <br />
     <audio id="beadSound" src="./assets/clac.wav" style="display: none"></audio>
     <audio id="resetSound" src="./assets/drip.wav" style="display: none"></audio>
     <br />
     <br />
 
-    <footer id="footer">
-      <div id="credit">
-        Developed by
-        <a href="https://hashtagweb.in" target="_blank">Hashtagweb.in</a>.
-      </div>
+    <footer id="footer" style="text-align: center">
+      <div id="credit">Developed and Managed by <a href="https://hashtagweb.in" target="_blank">Hashtagweb.in</a>.</div>
     </footer>
     <script src="./assets/script.min.js"></script>
   </body>
