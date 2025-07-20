@@ -7,14 +7,16 @@ This is a simple tool to practice abacus calculations virtually.
 1. Visit [tool webpage](https://hashtagweb.in/tools/abacus) in your browser.
 2. Adjust the number of rods.
 3. That's it, Start practicing.
-4. You can undo and redo your actions or reset the tool by clicking Reset.
-5. YOu can choose Multiplication/Division for without decimal operations.
+4. You can reset the tool by clicking Reset.
+5. You can choose Multiplication/Division for without decimal operations.
+6. Generate random numbers for practice.
 
 ## Options
 
-- **Number of Rodsa:** Set the number rods you want to use.
+- **Number of Rods:** Set the number rods you want to use.
 - **Reset:** Reset the position of beads.
-- **Calculation Mode** Change the calculation mode for decimal operations.
+- **Calculation Mode:** Change the calculation mode for decimal operations.
+- **Generate:** Generate random numbers for practice
 
 ## Screenshots
 
