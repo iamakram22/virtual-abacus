@@ -45,17 +45,23 @@
         <input type="radio" name="abacusMode" value="multiplication" />
         Multiplication/Division
       </label>
+
       <br />
       <br />
+
       <div class="random_container">
         <div class="input-group">
-          <label for="random_input" class="input-group-text"> Random Digits </label>
-          <input type="number" class="form-control" id="random_input" value="5" min="1" max="9" />
+          <div id="random_input_container" style="display: inline">
+            <label for="random_input" class="input-group-text"> Random Digits </label>
+            <input type="number" class="form-control" id="random_input" value="5" min="1" max="9" />
+          </div>
 
-          <label for="decimal_input" class="input-group-text">Decimals</label>
-          <input type="number" class="form-control" id="decimal_input" value="0" min="0" max="8" />
+          <div id="decimal_input_container" style="display: inline">
+            <label for="decimal_input" class="input-group-text">Decimals</label>
+            <input type="number" class="form-control" id="decimal_input" value="0" min="0" max="8" />
+          </div>
 
-          <input type="button" id="random" class="btn btn-success" value="Generate" />
+          <input type="button" id="random" class="button" value="Generate" />
 
           <span id="random_result" style="margin-left: 10px; font-weight: bold"></span>
           <span id="random_check" style="margin-left: 10px; display: none"> &#9989; </span>
@@ -70,6 +76,7 @@
     <footer id="footer" style="text-align: center">
       <div id="credit">Developed and Managed by <a href="https://hashtagweb.in" target="_blank">Hashtagweb.in</a>.</div>
     </footer>
+
     <script src="./assets/script.min.js"></script>
   </body>
 </html>
